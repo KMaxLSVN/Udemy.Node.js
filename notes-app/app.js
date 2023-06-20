@@ -1,3 +1,10 @@
-const fs = require('fs');
+const chalk = require('chalk');
 
-fs.writeFileSync('notes.txt', 'My name is God!');
+const getNotes = require('./notes.js');
+
+const msg = getNotes();
+console.log(msg);
+
+const coloredMsg = chalk.inverse.bold.blue('Success!');
+
+console.log(coloredMsg);
