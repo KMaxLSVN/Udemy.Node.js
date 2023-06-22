@@ -1,6 +1,5 @@
 const chalk = require('chalk');
 const yargs = require('yargs');
-
 const notes = require('./notes.js');
 
 // Customise yargs version
@@ -61,7 +60,7 @@ yargs.command({
       describe: 'Note title',
       demandOption: true,
       type: 'string',
-    }
+    },
   },
   handler(argv) {
     notes.readNote(argv.title);
@@ -70,13 +69,3 @@ yargs.command({
 
 // To activate all parameters
 yargs.parse();
-
-const command = process.argv[2];
-
-// console.log(process.argv);
-
-// if (command === 'add') {
-//   console.log('Adding note!');
-// } else if (command === 'remove') {
-//   console.log('Remove note!');
-// }
